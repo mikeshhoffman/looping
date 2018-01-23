@@ -13,6 +13,10 @@
     .red {
       color: red;
     }
+    
+    h1 {
+      text-align: center;
+    }
         
     header,
     section,
@@ -30,6 +34,7 @@
     }
     aside p {
       padding-left: 0.5rem;
+      padding-right: 0.5rem;
     }
     footer {
       background-color: deepskyblue;
@@ -66,7 +71,7 @@
 
   <aside>
     <p>
-      After your ride of the loops, the final roller coaster is shown.
+      After your ride of the loops, the final roller coaster is shown to the left.
     </p>
   </aside>
   
@@ -113,7 +118,7 @@
 
     var counter = 1;
 
-    // TODO EXTRA: on h1, set class to "red"
+    // TODO extra: on h1, set class to "red"
     document.getElementsByTagName("h1")[0].setAttribute("class", "red");
     
     // TODO extra: Execute the loop only half as many times as the user requested.
