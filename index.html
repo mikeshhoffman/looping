@@ -121,33 +121,42 @@
     document.getElementsByTagName("h1")[0].setAttribute("class", "red");
     
     // TODO extra: Execute the loop only half as many times as the user requested.
-//    howMany = howMany / 2;
+    //    howMany = howMany / 2;
 
     // TODO extra: Execute the loop twice as many times as the user requested.
-//    howMany = howMany * 2;    
-    
+    //    howMany = howMany * 2;    
+      
     // TODO: execute this loop the number of times user requested
-    while(counter <= howMany){
-      console.log("Wheee! This is the ", counter, " time we've done this!");
 
-      // find value of counter modulo length of sources array-
-      // this value will increase by one on each iteration of the loop,
-      // so image source will cycle through all possible images
-      var theOne = counter % imageSources.length;
-      // reset the src of the image to the next member of the sources array
-      theImg.setAttribute("src", imageSources[theOne]);
-
-      // TODO: increment the counter
-      counter++;
-    }
+    // TODO extra: show each loop after a delay:
+    // This line from the initial listing was replaced by the following two lines:
+    //while(counter <= parseInt(howMany)){
+    setInterval(function(){ 
+       if(counter <= howMany){
+  
+         console.log("Wheee! This is the, " + counter + ", time we've done this!");
+         // find value of counter modulo length of sources array-
+         // this value will increase by one on each iteration of the loop,
+         // so image source will cycle through all possible images
+         var theOne = counter % imageSources.length;
+         // reset the src of the image to the next member of the sources array
+         theImg.setAttribute("src", imageSources[theOne]);
+         // TODO: increment the counter
+         counter++;
+       } else {
+         clearInterval();
+       }
+     }, 850); // line added for showing each img
     
     // EXTRA CHALLENGES:
-    // 1. Using JS, add a class of "red" to the <h1>. DONE
+    
+    // 1. DONE: Using JS, add a class of "red" to the <h1>.
     //    This only needs to be done once, so code should be outside loop.
-    // 2. Execute the loop only half as many times, or twice as many times, as the user requested. DONE
-    // 3. Add a pause to each loop, so user can see each image as it cycles past.
-    //    This is a difficult one!  TRIED calling a pause function in loop, 
-    //    but the image went blank during looping and then the final image appeared.
+
+    // 2. DONE: Execute the loop only half as many times, or twice as many times, as the user requested.
+    
+    // 3. DONE: Add a pause to each loop, so user can see each image as it cycles past.
+    //    This is a difficult one!
 
   </script>
 
